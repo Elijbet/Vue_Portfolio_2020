@@ -234,6 +234,15 @@ export default {
       } else if (this.$route.params.section === "uxui") {
         return [
           {
+            placeholderVideoLink:
+              // "https://drive.google.com/uc?id=1QBqRwgbv3bt0-ZqZ9bBh6M8Ho15hVaaU",
+              "https://www.dropbox.com/s/klczt6wzn631u7i/AutoScroll%26Highlight%26Modalwithlink.mov?raw=1",
+            project: "Coding Interview Practice App",
+            internship: "BitbrokerLabs",
+            tech:
+              "React. Highlighted 'hints' automatically scroll to the top of the page as they appear, slowly fading out. Modal responds to 'no' by closing, 'yes' responds by forwarding to a survey."
+          },
+          {
             placeholderPDF: "https://codepen.io/elijbet/full/LYYzEyY",
             project: "Masonry Image Gallery with Animated Corner Fold",
             tech: "Vue"
