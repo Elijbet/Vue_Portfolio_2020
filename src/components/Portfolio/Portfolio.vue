@@ -236,11 +236,11 @@ export default {
           {
             placeholderVideoLink:
               // "https://drive.google.com/uc?id=1QBqRwgbv3bt0-ZqZ9bBh6M8Ho15hVaaU",
-              "https://www.dropbox.com/s/klczt6wzn631u7i/AutoScroll%26Highlight%26Modalwithlink.mov?raw=1",
+              "https://www.dropbox.com/s/wa6tqr6vwlq75fb/AutoScroll%26Highlight%26Modalwithlink%2001.mov?raw=1",
             project: "Coding Interview Practice App",
             internship: "BitbrokerLabs",
             tech:
-              "React. Highlighted 'hints' automatically scroll to the top of the page as they appear, slowly fading out. Modal responds to 'no' by closing, 'yes' responds by forwarding to a survey."
+              "React. App provides a coding challenge and buttons for Hints, Gotchas, and a Final Answer. These automatically scroll to the top of the page as they appear on click, slowly fading out. Modal responds to 'no' by closing, 'yes' responds by forwarding to a survey."
           },
           {
             placeholderPDF: "https://codepen.io/elijbet/full/LYYzEyY",
