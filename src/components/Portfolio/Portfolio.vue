@@ -248,6 +248,11 @@ export default {
             tech: "Vue"
           },
           {
+            placeholderPDF: "https://codepen.io/elijbet/full/XWbEvLK",
+            project: "Card layout with some CSS fun",
+            tech: "CSS"
+          },
+          {
             placeholderPDF: "https://codepen.io/elijbet/full/xxxRXbm",
             project: "Image mask skews on scroll",
             tech:
