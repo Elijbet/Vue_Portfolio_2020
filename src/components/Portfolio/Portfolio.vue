@@ -214,6 +214,12 @@ export default {
         return [
           {
             placeholder:
+              "https://www.dropbox.com/s/4afkditveif28bb/cooking07.png?raw=1",
+            project: "Create a poster with type only.",
+            tech: "Illustrator"
+          },
+          {
+            placeholder:
               "https://drive.google.com/uc?id=0B4qfPIQ8j-PYSEZtYl9QZHJVQTg",
             project: "Seafood Restaurant",
             tech: "Adobe Suite"
