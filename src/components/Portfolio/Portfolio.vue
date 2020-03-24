@@ -15,6 +15,29 @@
         :key="index"
         class="child center"
       >
+        <div v-if="item.codepenIframe" class="flex center">
+          <iframe
+            height="265"
+            style="width: 100%;"
+            scrolling="no"
+            title="Masonry Image Gallery with Animated Corner Fold"
+            :src="
+              'https://codepen.io/elijbet/embed/' +
+                item.codepenIframe +
+                '?height=265&theme-id=dark&default-tab=result'
+            "
+            frameborder="no"
+            allowtransparency="true"
+            allowfullscreen="true"
+          >
+            See the Pen
+            <a href="'https://codepen.io/elijbet/pen/'+item.codepenIframe">
+              Masonry Image Gallery with Animated Corner Fold
+            </a>
+            by elijbet (<a href="https://codepen.io/elijbet">@elijbet</a>) on
+            <a href="https://codepen.io">CodePen</a>.
+          </iframe>
+        </div>
         <div v-if="item.placeholder" class="flex center">
           <img
             :src="item.placeholder"
@@ -22,7 +45,7 @@
             id="show-modal"
           />
         </div>
-        <div v-if="item.placeholderPDF" class="flex center iframe-container">
+        <div v-if="item.placeholderPDF" class="flex center">
           <iframe
             :src="item.placeholderPDF"
             height="300px"
@@ -50,6 +73,8 @@
           </video>
         </div>
         <h3 class="header">PROJECT: {{ item.project.toUpperCase() }}</h3>
+        <p v-if="item.description">Description: {{ item.description }}</p>
+        <br />
         <p>Tech: {{ item.tech }}</p>
       </div>
     </div>
@@ -80,6 +105,10 @@
         <h3 class="header">
           PROJECT: {{ selectedUser.project.toUpperCase() }}
         </h3>
+        <p v-if="selectedUser.description">
+          Description: {{ selectedUser.description }}
+        </p>
+        <br />
         <p>Tech: {{ selectedUser.tech }}</p>
       </div>
     </modal>
@@ -133,6 +162,22 @@ export default {
             tech: "React Native"
           },
           {
+            placeholderVideoLink:
+              "https://www.dropbox.com/s/q22jk0szyfsfx77/Routing%20for%20interview%20problems%20as%20json%20props.mov?raw=1",
+            project: "Coding Interview Practice App",
+            description: "Routing for interview problems as JSON props",
+            tech: "React"
+          },
+          {
+            placeholderVideoLink:
+              "https://www.dropbox.com/s/p8qa2385ryhnjm2/Adding_Questions.mov?raw=1",
+            project: "Coding Interview Practice App",
+            internship: "BitBrokerLabs",
+            description:
+              "Adding interview questions, hints, gotchas, and final answer to JSON.",
+            tech: "React"
+          },
+          {
             placeholderImageLink:
               "https://drive.google.com/uc?id=1jS0Maw5UDHBQmqHi7rxD_de9e1K4PiXG",
             webLink:
@@ -163,8 +208,9 @@ export default {
               "https://drive.google.com/uc?id=1MDmxLNl2q5f0cbvVlD6ZgE9ftM-hLsOH",
             webLink: "https://github.com/Elijbet/Karma_Bank",
             project: "Karma Bank",
-            tech:
-              "Rails API & Vue front. Karma Bank is a positive affirmation app that logs your positive experiences and gives them out later to brighten up your day."
+            description:
+              "Karma Bank is a positive affirmation app that logs your positive experiences and gives them out later to brighten up your day.",
+            tech: "Rails API & Vue front."
           },
           {
             placeholderImageLink:
@@ -172,8 +218,10 @@ export default {
             webLInk:
               "https://github.com/Elijbet/Goodreads_clone/blob/master/README.md",
             project: "Readers App",
+            description:
+              "Deploy a Vue.js App with Firebase Hosting. This app is written a while ago. Working on an alternative Wonk App project with a new approach.",
             tech:
-              "Vue Goodreads Clone with API from Goodreads and Firebase backend. Deploy a Vue.js App with Firebase Hosting. This app is written a while ago. Working on an alternative Wonk App project with a new approach."
+              "Vue Goodreads Clone with API from Goodreads and Firebase backend."
           }
         ];
       } else if (this.$route.params.section === "interior") {
@@ -215,7 +263,8 @@ export default {
           {
             placeholder:
               "https://www.dropbox.com/s/4afkditveif28bb/cooking07.png?raw=1",
-            project: "Create a poster with type only.",
+            project: "Cooking Poster",
+            description: "Create a poster with type only.",
             tech: "Illustrator"
           },
           {
@@ -241,55 +290,80 @@ export default {
         return [
           {
             placeholderVideoLink:
-              // "https://drive.google.com/uc?id=1QBqRwgbv3bt0-ZqZ9bBh6M8Ho15hVaaU",
               "https://www.dropbox.com/s/wa6tqr6vwlq75fb/AutoScroll%26Highlight%26Modalwithlink%2001.mov?raw=1",
             project: "Coding Interview Practice App",
             internship: "BitbrokerLabs",
-            tech:
-              "React. App provides a coding challenge and buttons for Hints, Gotchas, and a Final Answer. These automatically scroll to the top of the page as they appear on click, slowly fading out. Modal responds to 'no' by closing, 'yes' responds by forwarding to a survey."
+            description:
+              "App provides a coding challenge and buttons for Hints, Gotchas, and a Final Answer. These automatically scroll to the top of the page as they appear on click, slowly fading out. Modal responds to 'no' by closing, 'yes' responds by forwarding to a survey.",
+            tech: "React"
           },
           {
-            placeholderPDF: "https://codepen.io/elijbet/full/LYYzEyY",
+            codepenIframe: "ExjdYKz",
+            project: "1920s in Western Fashion",
+            description:
+              "Use css timing and easing to create a collapsible menu, implement simple carousel.",
+            tech: "CSS"
+          },
+          {
+            codepenIframe: "poJOdzz",
+            project: "Responsive Card",
+            description:
+              "Use css transform and transition tools to rearrange the card on smaller screen.",
+            tech: "CSS"
+          },
+          {
+            codepenIframe: "LYYzEyY",
             project: "Masonry Image Gallery with Animated Corner Fold",
             tech: "Vue"
           },
           {
-            placeholderPDF: "https://codepen.io/elijbet/full/XWbEvLK",
+            codepenIframe: "yLNxeKK",
+            project: "Planning badly for a trip",
+            description: "Slide up description over image & button animation.",
+            tech: "CSS"
+          },
+          {
+            codepenIframe: "XWbEvLK",
             project: "Card layout with some CSS fun",
             tech: "CSS"
           },
           {
-            placeholderPDF: "https://codepen.io/elijbet/full/xxxRXbm",
+            codepenIframe: "xxxRXbm",
             project: "Image mask skews on scroll",
             tech:
               "Small animation project taking advantage of the scroll position."
           },
           {
-            placeholderPDF: "https://codepen.io/elijbet/full/vYYyNVr",
+            codepenIframe: "vYYyNVr",
             project: "Panel of Square Images",
             tech: "Vue and CSS practice layout."
           },
           {
-            placeholderPDF: "https://codepen.io/elijbet/full/wvvvYRd",
+            codepenIframe: "wvvvYRd",
             project: "Color Letters on Hover",
             tech: "Using Data attribute to create a hover animation."
           },
           {
-            placeholderPDF: "https://codepen.io/elijbet/full/ZEEbaWv",
+            codepenIframe: "VwLGveX",
+            project: "Animate Button",
+            tech: "CSS"
+          },
+          {
+            codepenIframe: "ZEEbaWv",
             project: "Sliding Side Menu with Styled Cursor",
             tech:
               "Hover on the right side red strip to open a menu panel. Study of slide in panels."
           },
           {
-            placeholderPDF: "https://codepen.io/elijbet/full/eYOabLb",
-            project: "Masonry Carousel",
-            tech: "Study of a Vue Carousel Layout of Stacked Images."
-          },
-          {
-            placeholderPDF: "https://codepen.io/elijbet/full/zYYdjYy",
+            codepenIframe: "zYYdjYy",
             project: "Donuts",
             tech:
               "CSS. Fun donut shaped images. Practice absolute positioning and background-clipping."
+          },
+          {
+            codepenIframe: "eYOabLb",
+            project: "Masonry Carousel",
+            tech: "Study of a Vue Carousel Layout of Stacked Images."
           }
         ];
         // {placeholderPDF: 'https://codepen.io/elijbet/full/dyyzRva', project: 'Different Scroll Speeds', tech: 'Taken some jquery version of parallax boxes moving at different speeds and converted into Vue.'},
