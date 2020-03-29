@@ -298,6 +298,11 @@ export default {
             tech: "React"
           },
           {
+            codepenIframe: "QWbYNwN",
+            project: "Mosaic Grid",
+            tech: "CSS"
+          },
+          {
             codepenIframe: "zYGMMeK",
             project: "Berserk Yogurt Shop",
             description:
