@@ -298,6 +298,13 @@ export default {
             tech: "React"
           },
           {
+            codepenIframe: "zYGMMeK",
+            project: "Berserk Yogurt Shop",
+            description:
+              "Hovering on direction-aware menu brings up the menu item image and description.",
+            tech: "SCSS"
+          },
+          {
             codepenIframe: "ExjdYKz",
             project: "1920s in Western Fashion",
             description:
