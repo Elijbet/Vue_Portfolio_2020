@@ -15,6 +15,7 @@
         :key="index"
         class="child center"
       >
+        <!-- codepen -->
         <div v-if="item.codepenIframe" class="flex center">
           <iframe
             height="265"
@@ -38,6 +39,7 @@
             <a href="https://codepen.io">CodePen</a>.
           </iframe>
         </div>
+        <!-- image -->
         <div v-if="item.placeholder" class="flex center">
           <img
             :src="item.placeholder"
@@ -45,7 +47,8 @@
             id="show-modal"
           />
         </div>
-        <div v-if="item.placeholderPDF" class="flex center">
+        <!-- pdf -->
+        <div v-if="item.placeholderPDF" class="flex center position">
           <iframe
             :src="item.placeholderPDF"
             height="300px"
@@ -53,11 +56,12 @@
             frameborder="0"
             border="0"
             cellspacing="0"
-            style="border-style: none"
+            style="border-style: none;"
           >
           </iframe>
           <div class="overlay" @click="sendInfo(item)" id="show-modal"></div>
         </div>
+        <!-- link -->
         <div v-if="item.placeholderImageLink" class="flex center">
           <a :href="item.webLink" class="flex center">
             <img :src="item.placeholderImageLink" />
@@ -80,14 +84,17 @@
     </div>
     <modal v-if="showModal" @close="showModal = false">
       <div slot="body" class="center flex body">
+        <!-- video -->
         <div v-if="selectedUser.placeholderVideoLink" class="flex center">
           <video width="80%" controls>
             <source :src="selectedUser.placeholderVideoLink" type="video/mp4" />
           </video>
         </div>
+        <!-- image -->
         <div v-if="selectedUser.placeholder" class="flex center">
           <img :src="selectedUser.placeholder" />
         </div>
+        <!-- pdf -->
         <div
           v-if="selectedUser.placeholderPDF"
           class="flex center iframe-width"
@@ -131,6 +138,7 @@ export default {
     sendInfo(item) {
       this.showModal = true;
       this.selectedUser = Object.assign({}, item);
+      console.log("this.selectedUser", this.selectedUser);
     }
   },
   computed: {
@@ -228,34 +236,34 @@ export default {
         return [
           {
             placeholderPDF:
-              "https://drive.google.com/uc?id=0B4qfPIQ8j-PYaUZoN3QwYUxDNkk#toolbar=0",
+              "https://drive.google.com/uc?id=0B4qfPIQ8j-PYaUZoN3QwYUxDNkk",
             project: "Portfolio",
             tech:
               "Adobe Suite, SketchUp, 3ds Max, AutoCAD, Sketches, Pencil Drawing"
           },
           {
             placeholderPDF:
-              "https://drive.google.com/uc?id=18x0UyjVJkJdL1siBNjcpuUsvHbwI-gc6#toolbar=0",
+              "https://drive.google.com/uc?id=18x0UyjVJkJdL1siBNjcpuUsvHbwI-gc6",
             project: "Elevations",
             tech: "AutoCAD, Photoshop"
           },
           {
             placeholderPDF:
-              "https://drive.google.com/uc?id=1WZXg3zKNszEBtliKMU_xqzpBfDx0TOqv#toolbar=0",
+              "https://drive.google.com/uc?id=1WZXg3zKNszEBtliKMU_xqzpBfDx0TOqv",
             project: "Residential Renderings",
             tech: "SketchUp, Photoshop"
           },
           {
             placeholderPDF:
-              "https://drive.google.com/uc?id=1uvmNdK-9j3taPc6H3QKKk_nqaLcUOfHp#toolbar=0",
-            project: "Long Renderings",
-            tech: "AutoCAD, Photoshop"
+              "https://drive.google.com/uc?id=1YSP7lIExPv8elY9vAx3j1DaPVJ2kBfqe",
+            project: "Collection",
+            tech: "SketchUp, AutoCAD, Photoshop"
           },
           {
             placeholderPDF:
-              "https://drive.google.com/uc?id=1YSP7lIExPv8elY9vAx3j1DaPVJ2kBfqe#toolbar=0",
-            project: "Collection",
-            tech: "SketchUp, AutoCAD, Photoshop"
+              "https://drive.google.com/uc?id=1uvmNdK-9j3taPc6H3QKKk_nqaLcUOfHp",
+            project: "Long Renderings",
+            tech: "AutoCAD, Photoshop"
           }
         ];
       } else if (this.$route.params.section === "graphic") {
@@ -484,6 +492,9 @@ p {
   margin-top: 35px;
   flex-direction: column;
   margin-bottom: 30px;
+}
+.position {
+  position: relative;
 }
 .overlay {
   top: 0;
