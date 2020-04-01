@@ -138,7 +138,6 @@ export default {
     sendInfo(item) {
       this.showModal = true;
       this.selectedUser = Object.assign({}, item);
-      console.log("this.selectedUser", this.selectedUser);
     }
   },
   computed: {
