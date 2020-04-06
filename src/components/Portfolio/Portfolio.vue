@@ -9,6 +9,25 @@
       <router-link to="/about"><h5>ABOUT</h5></router-link>
     </div>
 
+    <div class="directions" v-if="this.$route.params.section === 'uxui'">
+      <div class="call">
+        <h5>TO VIEW CODEPEN SNIPPETS IN FULL VIEW FOLLOW THE DIRECTIONS</h5>
+        <p><i class="arrow down"></i></p>
+      </div>
+      <div class="guide_img">
+        <img
+          src="../../assets/gotocodepen.png"
+          alt=""
+          style="height: 400px; width: auto"
+        />
+        <img
+          src="../../assets/changeview.png"
+          alt=""
+          style="height: 400px; width: auto;"
+        />
+      </div>
+    </div>
+
     <div class="display">
       <div
         v-for="(item, index) in itemsConditional"
@@ -342,6 +361,13 @@ export default {
             tech: "CSS"
           },
           {
+            codepenIframe: "BaNgxQQ",
+            project: "Rainbow scroll masonry with CSS grid and JS.",
+            description:
+              "Knowing the height of rows in CSS grid find the height of the contents with JS and apply that grid-row-end value to get dynamic card height. Apply rainbow colors to a range of cards.",
+            tech: "CSS, JS"
+          },
+          {
             codepenIframe: "XWbEvLK",
             project: "Card layout with some CSS fun",
             tech: "CSS"
@@ -409,6 +435,7 @@ h5 {
   font-family: sans-serif;
   color: white;
   background-color: #1d1e21;
+  padding-top: 130px;
 }
 .navbar {
   width: 100%;
@@ -435,7 +462,29 @@ h5 {
   display: flex;
   flex-wrap: wrap;
   padding: 15px;
-  margin-top: 120px;
+}
+.directions {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 15px 0px 15px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+.guide_img {
+  display: flex;
+  flex-direction: row;
+  display: none;
+}
+.call {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.directions:hover .guide_img {
+  display: block;
 }
 .child {
   width: 33%;
@@ -507,6 +556,17 @@ p {
 }
 .iframe-width {
   width: 700px;
+}
+/* DOWN ARROW */
+i {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 @media only screen and (max-width: 992px) {
   .child {
