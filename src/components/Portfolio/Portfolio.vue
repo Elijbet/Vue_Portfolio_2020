@@ -105,7 +105,7 @@
       <div slot="body" class="center flex body">
         <!-- video -->
         <div v-if="selectedUser.placeholderVideoLink" class="flex center">
-          <video width="80%" controls>
+          <video :width="selectedUser.width" controls>
             <source :src="selectedUser.placeholderVideoLink" type="video/mp4" />
           </video>
         </div>
@@ -169,7 +169,8 @@ export default {
               "https://www.dropbox.com/s/j62jiyvm81xube8/checkout_process_02.mov?raw=1",
             project: "Lee's Chinese Restaurant",
             internship: "BitbrokerLabs",
-            tech: "React Native"
+            tech: "React Native",
+            width: "80%"
           },
           {
             placeholderVideoLink:
@@ -177,7 +178,8 @@ export default {
               "https://www.dropbox.com/s/m6ory9ho4rtvwwz/edit%20button%20makes%20items%20removable.mov?raw=1",
             project: "Lee's Chinese Restaurant",
             internship: "BitbrokerLabs",
-            tech: "React Native"
+            tech: "React Native",
+            width: "80%"
           },
           {
             placeholderVideoLink:
@@ -185,14 +187,16 @@ export default {
               "https://www.dropbox.com/s/dyagpcyq51thox6/remove_item_untick.mov?raw=1",
             project: "Lee's Chinese Restaurant",
             internship: "BitbrokerLabs",
-            tech: "React Native"
+            tech: "React Native",
+            width: "80%"
           },
           {
             placeholderVideoLink:
               "https://www.dropbox.com/s/q22jk0szyfsfx77/Routing%20for%20interview%20problems%20as%20json%20props.mov?raw=1",
             project: "Coding Interview Practice App",
             description: "Routing for interview problems as JSON props",
-            tech: "React"
+            tech: "React",
+            width: "80%"
           },
           {
             placeholderVideoLink:
@@ -201,7 +205,8 @@ export default {
             internship: "BitBrokerLabs",
             description:
               "Adding interview questions, hints, gotchas, and final answer to JSON.",
-            tech: "React"
+            tech: "React",
+            width: "80%"
           },
           {
             placeholderImageLink:
@@ -315,13 +320,29 @@ export default {
       } else if (this.$route.params.section === "uxui") {
         return [
           {
+            placeholderPDF:
+              "https://drive.google.com/uc?id=1BCCWFBMkNd4tkIAxuGx_KpzuKFedfOO6",
+            project: "Real Time Product Tracking App",
+            description: "UCLA UX project 1/2",
+            Tech: "Adobe XD, Indesign"
+          },
+          {
+            placeholderVideoLink:
+              "https://www.dropbox.com/s/gamb6nfc31skwhk/Prototype_walkthrough_take2.mov?raw=1",
+            project: "Real Time Product Tracking App",
+            description: "UCLA UX project 2/2",
+            Tech: "Adobe XD",
+            width: "50%"
+          },
+          {
             placeholderVideoLink:
               "https://www.dropbox.com/s/wa6tqr6vwlq75fb/AutoScroll%26Highlight%26Modalwithlink%2001.mov?raw=1",
             project: "Coding Interview Practice App",
             internship: "BitbrokerLabs",
             description:
               "App provides a coding challenge and buttons for Hints, Gotchas, and a Final Answer. These automatically scroll to the top of the page as they appear on click, slowly fading out. Modal responds to 'no' by closing, 'yes' responds by forwarding to a survey.",
-            tech: "React"
+            tech: "React",
+            width: "80%"
           },
           {
             codepenIframe: "QWbYNwN",
