@@ -257,7 +257,6 @@ export default {
           {
             placeholderPDF:
               "https://drive.google.com/file/d/1RbYfxzxFPhSutwejtz3mTJmhEtPienTu/preview",
-            // "https://drive.google.com/uc?id=0B4qfPIQ8j-PYaUZoN3QwYUxDNkk#toolbar=0",
             project: "Portfolio",
             tech:
               "Adobe Suite, SketchUp, 3ds Max, AutoCAD, Sketches, Pencil Drawing"
@@ -265,25 +264,24 @@ export default {
           {
             placeholderPDF:
               "https://drive.google.com/file/d/18x0UyjVJkJdL1siBNjcpuUsvHbwI-gc6/preview",
-            // "https://drive.google.com/uc?id=18x0UyjVJkJdL1siBNjcpuUsvHbwI-gc6#toolbar=0",
             project: "Elevations",
             tech: "AutoCAD, Photoshop"
           },
           {
             placeholderPDF:
-              "https://drive.google.com/uc?id=1WZXg3zKNszEBtliKMU_xqzpBfDx0TOqv#toolbar=0",
+              "https://drive.google.com/file/d/1WZXg3zKNszEBtliKMU_xqzpBfDx0TOqv/preview",
             project: "Residential Renderings",
             tech: "SketchUp, Photoshop"
           },
           {
             placeholderPDF:
-              "https://drive.google.com/uc?id=1YSP7lIExPv8elY9vAx3j1DaPVJ2kBfqe#toolbar=0",
+              "https://drive.google.com/file/d/1YSP7lIExPv8elY9vAx3j1DaPVJ2kBfqe/preview",
             project: "Collection",
             tech: "SketchUp, AutoCAD, Photoshop"
           },
           {
             placeholderPDF:
-              "https://drive.google.com/uc?id=1uvmNdK-9j3taPc6H3QKKk_nqaLcUOfHp#toolbar=0",
+              "https://drive.google.com/file/d/1uvmNdK-9j3taPc6H3QKKk_nqaLcUOfHp/preview",
             project: "Long Renderings",
             tech: "AutoCAD, Photoshop"
           }
@@ -320,7 +318,7 @@ export default {
         return [
           {
             placeholderPDF:
-              "https://drive.google.com/uc?id=1BCCWFBMkNd4tkIAxuGx_KpzuKFedfOO6#toolbar=0",
+              "https://drive.google.com/file/d/1BCCWFBMkNd4tkIAxuGx_KpzuKFedfOO6/preview",
             project: "Real Time Product Tracking App",
             description: "UCLA UX project 1/3",
             tech: "Adobe XD, Indesign"
@@ -335,7 +333,7 @@ export default {
           },
           {
             placeholderPDF:
-              "https://drive.google.com/uc?id=17F_6GCm3LLz8cqGf4qpNRwmHVba1w_FO#toolbar=0",
+              "https://drive.google.com/file/d/17F_6GCm3LLz8cqGf4qpNRwmHVba1w_FO/preview",
             project: "Real Time Product Tracking App",
             description: "UCLA UX project 3/3",
             tech: "Adobe XD, Indesign, Photoshop"
