@@ -165,7 +165,6 @@ export default {
         return [
           {
             placeholderVideoLink:
-              // "https://drive.google.com/uc?id=1QBqRwgbv3bt0-ZqZ9bBh6M8Ho15hVaaU",
               "https://www.dropbox.com/s/j62jiyvm81xube8/checkout_process_02.mov?raw=1",
             project: "Lee's Chinese Restaurant",
             internship: "BitbrokerLabs",
@@ -174,7 +173,6 @@ export default {
           },
           {
             placeholderVideoLink:
-              // "https://drive.google.com/uc?id=1lPt8_7LCPyuW7UBMloVoyTLmLOeOnt-z",
               "https://www.dropbox.com/s/m6ory9ho4rtvwwz/edit%20button%20makes%20items%20removable.mov?raw=1",
             project: "Lee's Chinese Restaurant",
             internship: "BitbrokerLabs",
@@ -183,7 +181,6 @@ export default {
           },
           {
             placeholderVideoLink:
-              // "https://drive.google.com/uc?id=1LAY_VyNWviGd2M3Ejc8xzwsvotRQ-3l5",
               "https://www.dropbox.com/s/dyagpcyq51thox6/remove_item_untick.mov?raw=1",
             project: "Lee's Chinese Restaurant",
             internship: "BitbrokerLabs",
@@ -259,7 +256,8 @@ export default {
         return [
           {
             placeholderPDF:
-              "https://drive.google.com/uc?id=0B4qfPIQ8j-PYaUZoN3QwYUxDNkk#toolbar=0",
+              "https://drive.google.com/file/d/1RbYfxzxFPhSutwejtz3mTJmhEtPienTu/preview",
+            // "https://drive.google.com/uc?id=0B4qfPIQ8j-PYaUZoN3QwYUxDNkk#toolbar=0",
             project: "Portfolio",
             tech:
               "Adobe Suite, SketchUp, 3ds Max, AutoCAD, Sketches, Pencil Drawing"
