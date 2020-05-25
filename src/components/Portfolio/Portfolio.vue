@@ -264,7 +264,8 @@ export default {
           },
           {
             placeholderPDF:
-              "https://drive.google.com/uc?id=18x0UyjVJkJdL1siBNjcpuUsvHbwI-gc6#toolbar=0",
+              "https://drive.google.com/file/d/18x0UyjVJkJdL1siBNjcpuUsvHbwI-gc6/preview",
+            // "https://drive.google.com/uc?id=18x0UyjVJkJdL1siBNjcpuUsvHbwI-gc6#toolbar=0",
             project: "Elevations",
             tech: "AutoCAD, Photoshop"
           },
