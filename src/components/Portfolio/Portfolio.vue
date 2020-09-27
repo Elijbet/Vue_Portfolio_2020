@@ -80,6 +80,20 @@
           </iframe>
           <div class="overlay" @click="sendInfo(item)" id="show-modal"></div>
         </div>
+        <!-- google drive video -->
+        <div v-if="item.placeholderGoogleDrive" class="flex center position">
+          <iframe
+            :src="item.placeholderGoogleDrive"
+            height="210px"
+            width="380px"
+            frameborder="0"
+            border="0"
+            cellspacing="0"
+            style="border-style: none;"
+          >
+          </iframe>
+          <div class="overlay" @click="sendInfo(item)" id="show-modal"></div>
+        </div>
         <!-- link -->
         <div v-if="item.placeholderImageLink" class="flex center">
           <a :href="item.webLink" class="flex center">
@@ -128,6 +142,21 @@
             style="border-style: none;"
           ></iframe>
         </div>
+        <!-- Google Drive Video -->
+        <div
+          v-if="selectedUser.placeholderGoogleDrive"
+          class="flex center iframe-width"
+        >
+          <iframe
+            :src="selectedUser.placeholderGoogleDrive"
+            height="520px"
+            width="130%"
+            frameborder="0"
+            border="0"
+            cellspacing="0"
+            style="border-style: none;"
+          ></iframe>
+        </div>
         <h3 class="header">
           PROJECT: {{ selectedUser.project.toUpperCase() }}
         </h3>
@@ -163,6 +192,21 @@ export default {
     itemsConditional() {
       if (this.$route.params.section === "code") {
         return [
+          {
+            placeholderGoogleDrive:
+              "https://drive.google.com/file/d/1PpGQsOtf6eY767KAIl8Zy76C_3J1lkHy/preview",
+            project: "Weather App",
+            description:
+              "Create a basic weather app. Use the time to determine the background. Fetch and display weather. Change icon depending on weather conditions. Send a local notification to the user every few minutes with the current temperature.",
+            tech: "React Native & React Native Local Notifications Plug-in"
+          },
+          {
+            placeholderGoogleDrive:
+              "https://drive.google.com/file/d/11b42efcOiFwUDKuEyO9t_fDVcdujvGhj/preview",
+            project: "Travel App",
+            internship: "Avoy",
+            tech: "React Native"
+          },
           {
             placeholderVideoLink:
               "https://www.dropbox.com/s/j62jiyvm81xube8/checkout_process_02.mov?raw=1",
@@ -436,7 +480,6 @@ export default {
             tech: "Study of a Vue Carousel Layout of Stacked Images."
           }
         ];
-        // {placeholderPDF: 'https://codepen.io/elijbet/full/dyyzRva', project: 'Different Scroll Speeds', tech: 'Taken some jquery version of parallax boxes moving at different speeds and converted into Vue.'},
       } else {
         return false;
       }
